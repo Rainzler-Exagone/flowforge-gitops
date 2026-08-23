@@ -5,4 +5,3 @@ resources:
   - api-deployment.yaml
   - api-service.yaml
   - worker-deployment.yaml
-  - scheduler-deployment.yaml
