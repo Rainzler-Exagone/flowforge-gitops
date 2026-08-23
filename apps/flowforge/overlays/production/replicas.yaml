@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flowforge-api
+spec:
+  replicas: 2
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flowforge-worker
+spec:
+  replicas: 3
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flowforge-scheduler
+spec:
+  replicas: 1

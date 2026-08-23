@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: flowforge-scheduler
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: flowforge-scheduler
+
+  template:
+    metadata:
+      labels:
+        app: flowforge-scheduler
+
+    spec:
+      containers:
+        - name: scheduler
+          image: ghcr.io/rainzler-exagone/flowforge-scheduler:latest
+
+          env:
+            - name: NODE_ENV
+              value: production
+
+            - name: LOG_LEVEL
+              value: info

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: flowforge-worker
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: flowforge-worker
+
+  template:
+    metadata:
+      labels:
+        app: flowforge-worker
+
+    spec:
+      containers:
+        - name: worker
+          image: ghcr.io/rainzler-exagone/flowforge-worker:latest
+
+          env:
+            - name: NODE_ENV
+              value: production
+
+            - name: LOG_LEVEL
+              value: info
