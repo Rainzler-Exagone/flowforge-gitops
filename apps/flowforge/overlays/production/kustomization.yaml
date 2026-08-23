@@ -9,7 +9,7 @@ patches:
 
 images:
   - name: ghcr.io/rainzler-exagone/flowforge-api
-    newTag: caa9e34d817eecdc71d0d8a75448de016699cdb5
+    newTag: adc700314b9fcdad1df15eca3b18c9b3bf903a0a
 
   - name: ghcr.io/rainzler-exagone/flowforge-worker
-    newTag: caa9e34d817eecdc71d0d8a75448de016699cdb5
+    newTag: adc700314b9fcdad1df15eca3b18c9b3bf903a0a
