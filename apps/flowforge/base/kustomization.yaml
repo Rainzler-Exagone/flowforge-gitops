@@ -7,3 +7,7 @@ resources:
   - worker-deployment.yaml
   - kafka-deployment.yaml
   - kafka-service.yaml
+
+  - vault-connection.yaml
+  - vault-auth.yaml
+  - vault-static-secrets.yaml
