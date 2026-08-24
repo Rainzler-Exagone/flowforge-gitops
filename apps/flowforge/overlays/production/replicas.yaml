@@ -13,10 +13,3 @@ metadata:
 spec:
   replicas: 3
 
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: flowforge-scheduler
-spec:
-  replicas: 1
