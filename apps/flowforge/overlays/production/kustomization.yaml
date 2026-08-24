@@ -3,6 +3,9 @@ kind: Kustomization
 
 resources:
   - ../../base
+  - ../../../postgres/deployment.yaml
+  - ../../../postgres/service.yaml
+  - ../../../postgres/pvc.yaml
 
 patches:
   - path: replicas.yaml

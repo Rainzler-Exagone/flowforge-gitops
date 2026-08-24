@@ -22,19 +22,19 @@ spec:
             - name: POSTGRES_USER
               valueFrom:
                 secretKeyRef:
-                  name: postgres-secret
+                  name: flowforge-database-secret
                   key: POSTGRES_USER
 
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: postgres-secret
+                  name: flowforge-database-secret
                   key: POSTGRES_PASSWORD
 
             - name: POSTGRES_DB
               valueFrom:
                 secretKeyRef:
-                  name: postgres-secret
+                  name: flowforge-database-secret
                   key: POSTGRES_DB
 
           volumeMounts:
