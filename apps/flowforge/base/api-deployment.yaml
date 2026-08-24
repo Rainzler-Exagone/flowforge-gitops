@@ -27,6 +27,9 @@ spec:
           env:
             - name: NODE_ENV
               value: production
+            
+            - name: KAFKA_BROKER
+              value: kafka:9092
 
             - name: PORT
               value: "3000"
