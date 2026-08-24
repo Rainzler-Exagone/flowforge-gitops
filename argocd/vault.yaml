@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: vault
+  namespace: argocd
+
+spec:
+  project: default
+
+  sources:
+    - repoURL: https://helm.releases.hashicorp.com
+      chart: vault
+      targetRevision: 0.31.0
+      helm:
+        valueFiles:
+          - $values/infrastructure/vault/values.yaml
+
+    - repoURL: https://github.com/Rainzler-Exagone/flowforge-gitops
+      targetRevision: main
+      ref: values
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: vault
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true
