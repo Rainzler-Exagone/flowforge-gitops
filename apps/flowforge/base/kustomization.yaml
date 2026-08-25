@@ -11,3 +11,5 @@ resources:
   - vault-connection.yaml
   - vault-auth.yaml
   - vault-static-secrets.yaml
+  - migration/job.yaml
+
